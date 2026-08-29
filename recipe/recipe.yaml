@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.15.3"
+  version: "0.15.4"
 
 package:
   name: flair-inference
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/f/flair-inference/flair_inference-${{ version }}.tar.gz
-  sha256: 5fbbdcec29fd6089837a8b94b1706436334fb47643c6b6af39db4d50b2f56033
+  sha256: 8da78148df61e60e4b64e4bd3b521813fd0f4b485910495a8bc4a254238cbd6e
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -39,7 +39,7 @@ requirements:
     - tabulate >=0.8.10
     - pytorch >=1.13.1
     - tqdm >=4.63.0
-    - transformers >=4.45.0,<5.9.0
+    - transformers >=4.45.0,<6.0.0
     - python-bioc <3.0.0,>=2.0.0
 
 tests:
